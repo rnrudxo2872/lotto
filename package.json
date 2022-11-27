@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "https://rnrudxo2872.github.io/lotto",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
