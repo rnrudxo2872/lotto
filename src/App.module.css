@@ -1,3 +1,31 @@
 .lotto-gen__btn {
   border: none;
 }
+
+.lotto__app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lotto-circle__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.lotto__circle {
+  --circle-size: 60px;
+  width: var(--circle-size);
+  height: var(--circle-size);
+
+  position: relative;
+  background-color: bisque;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.712);
+}
