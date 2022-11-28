@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, useEffect } from "react";
 
 import "./default.css";
 import style from "./App.module.css";
@@ -31,6 +31,10 @@ function App() {
     );
   };
 
+  useEffect(() => {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }, []);
+
   return (
     <div className={style["App"]}>
       <div className={style["lotto__app"]}>
@@ -38,6 +42,16 @@ function App() {
         <button className={style["lotto-gen__btn"]} onClick={generateNumbers}>
           번호 추첨하기
         </button>
+      </div>
+      <div>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-format="fluid"
+          data-ad-layout-key="-fb+5w+4e-db+86"
+          data-ad-client="ca-pub-1570864311629859"
+          data-ad-slot="4323816483"
+        ></ins>
       </div>
     </div>
   );
