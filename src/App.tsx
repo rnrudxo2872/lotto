@@ -1,13 +1,18 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 
 import "./default.css";
 import style from "./App.module.css";
+import LotteryCircle from "./components/lotteryCircle";
 
 const INIT_NUMBERS = [0, 0, 0, 0, 0];
 
 function App() {
   const [numbers, setNumbers] = useState<number[]>(INIT_NUMBERS);
   const isUnSet = useRef<boolean>(true);
+  const circles = useMemo(
+    () => numbers?.map((item, idx) => <LotteryCircle key={idx}>{isUnSet.current ? null : item}</LotteryCircle>),
+    [numbers]
+  );
 
   const generateNumbers = () => {
     isUnSet.current = false;
@@ -27,15 +32,9 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={style["App"]}>
       <div className={style["lotto__app"]}>
-        <div className={style["lotto-circle__wrapper"]}>
-          {numbers?.map((item, idx) => (
-            <div key={idx} className={style["lotto__circle"]}>
-              <span className={style["lotto__number"]}>{isUnSet.current ? null : item}</span>
-            </div>
-          ))}
-        </div>
+        <div className={style["lotto-circle__wrapper"]}>{circles}</div>
         <button className={style["lotto-gen__btn"]} onClick={generateNumbers}>
           번호 추첨하기
         </button>

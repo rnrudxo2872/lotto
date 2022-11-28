@@ -1,0 +1,20 @@
+.lotto__circle {
+  --circle-size: 60px;
+  width: var(--circle-size);
+  height: var(--circle-size);
+
+  position: relative;
+  background-color: bisque;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.712);
+}
+
+.lotto__number {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
