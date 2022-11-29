@@ -42,16 +42,21 @@ function App() {
         <button className={style["lotto-gen__btn"]} onClick={generateNumbers}>
           번호 추첨하기
         </button>
-      </div>
-      <div>
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-format="fluid"
-          data-ad-layout-key="-fb+5w+4e-db+86"
-          data-ad-client="ca-pub-1570864311629859"
-          data-ad-slot="4323816483"
-        ></ins>
+        <div>
+          <ins
+            className="adsbygoogle"
+            style={{
+              overflowX: "auto",
+              overflowY: "hidden",
+              display: "block",
+              textAlign: "center",
+            }}
+            data-ad-format="fluid"
+            data-ad-layout-key="-fb+5w+4e-db+86"
+            data-ad-client="ca-pub-1570864311629859"
+            data-ad-slot="4323816483"
+          ></ins>
+        </div>
       </div>
     </div>
   );
