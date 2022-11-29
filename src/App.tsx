@@ -45,16 +45,11 @@ function App() {
         <div>
           <ins
             className="adsbygoogle"
-            style={{
-              overflowX: "auto",
-              overflowY: "hidden",
-              display: "block",
-              textAlign: "center",
-            }}
-            data-ad-format="fluid"
-            data-ad-layout-key="-fb+5w+4e-db+86"
+            style={{ display: "block" }}
             data-ad-client="ca-pub-1570864311629859"
-            data-ad-slot="4323816483"
+            data-ad-slot="8539243724"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
           ></ins>
         </div>
       </div>
